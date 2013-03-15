@@ -1,0 +1,45 @@
+package com.example.moviefinder;
+
+import android.app.TabActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TabHost;
+import android.widget.TabHost.TabSpec;
+
+public class TabController extends TabActivity {
+	private static final String SEARCH_TAB = "Search";
+	private static final String MY_MOVIES_TAB = "My movies";
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.tabs);
+
+		TabHost tabHost = getTabHost();
+
+		// search Tab
+		TabSpec searchTab = tabHost.newTabSpec(SEARCH_TAB);
+		// Tab Icon
+		searchTab.setIndicator(SEARCH_TAB);
+		Intent searchIntent = new Intent(TabController.this, MovieFinder.class);
+		// Tab Content
+		searchTab.setContent(searchIntent);
+
+		// my movies Tab
+		TabSpec myMoviesTab = tabHost.newTabSpec(MY_MOVIES_TAB);
+		myMoviesTab.setIndicator(MY_MOVIES_TAB);
+		Intent myMoviesIntent = new Intent(TabController.this, MyMovies.class);
+		myMoviesTab.setContent(myMoviesIntent);
+
+		// Adding all TabSpec to TabHost
+		tabHost.addTab(searchTab); // Adding search tab
+		tabHost.addTab(myMoviesTab); // Adding my movies tab
+	}
+
+
+	protected void onDelete() {
+		super.onStop();
+
+	}
+
+}

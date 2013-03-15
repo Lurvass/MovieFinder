@@ -1,0 +1,49 @@
+10
+
+dir
+24
+https://svn.java.net/svn/moviefinder~MovieFinderSimonPer/MovieFinder/res
+https://svn.java.net/svn/moviefinder~MovieFinderSimonPer
+
+
+
+2012-10-19T10:18:55.178299Z
+23
+perk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+334de837-59c0-494b-d63f-a7a5682e0320
+
+drawable-hdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+layout
+dir
+
+menu
+dir
+
+values
+dir
+
